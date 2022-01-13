@@ -1,0 +1,155 @@
+.body {
+    height: 100px;
+  padding: 0px 50px;
+  background-color: #d1411e;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+.container {
+	position: relative;
+	margin-top: 100px;
+}
+.container img {
+	display: block;
+	width: 100%;
+}
+.nav {
+	position: fixed;
+	z-index: 10;
+	left: 0;
+	right: 0;
+	top: 0;
+	font-family: 'Montserrat', sans-serif;
+	padding: 0 5%;
+	height: 100px;
+	background-color: #d1411e;
+}
+.nav .logo {
+	float: left;
+	width: 40%;
+	height: 100%;
+	display: flex;
+	align-items: center;
+	font-size: 24px;
+	color: #fff;
+}
+.nav .links {
+	float: right;
+	padding: 0;
+	margin: 0;
+	width: 60%;
+	height: 100%;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+.nav ul li:hover{
+  transform: scale(1.3);
+  z-index:2;
+  background-color: red;
+}
+nav .links li {
+	list-style: none;
+}
+.listItems{
+    display: block;
+	padding: 1em;
+	font-size: 16px;
+	font-weight: bold;
+	color: #fff;
+	text-decoration: none;
+}
+#navtoggle {
+	position: absolute;
+	top: -100px;
+    visibility: hidden;
+}
+.nav .iconburger {
+	display: none;
+	position: absolute;
+	right: 5%;
+	top: 50%;
+	transform: translateY(-50%);
+}
+.nav .iconburger .line {
+	width: 30px;
+	height: 5px;
+	background-color: #fff;
+	margin: 5px;
+	border-radius: 3px;
+	transition: all .3s ease-in-out;
+}
+
+.cart{
+    position: relative;
+    transform: 1s;
+}
+.cart:hover{
+  transform: scale(1.3);
+  z-index:2;
+}
+
+
+.counter{
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: white;
+    padding: 3px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    color: #d1411e;
+}
+
+@media screen and (max-width: 768px) {
+	.nav .logo {
+		float: none;
+		width: auto;
+		justify-content: center;
+	}
+	.nav .links {
+		float: none;
+		position: fixed;
+		z-index: 9;
+		left: 0;
+		right: 0;
+		top: 100px;
+		bottom: 100%;
+		width: auto;
+		height: auto;
+		flex-direction: column;
+		justify-content: space-evenly;
+		background-color: rgba(0,0,0,.8);
+		overflow: hidden;
+		box-sizing: border-box;
+		transition: all .5s ease-in-out;
+	}
+	.nav .links a {
+		font-size: 20px;
+	}
+	.nav :checked ~ .links {
+		bottom: 0;
+	}
+	.nav .iconburger {
+		display: block;
+	}
+	.nav :checked ~ .iconburger .line:nth-child(1) {
+		transform: translateY(10px) rotate(225deg);
+	}
+	.nav :checked ~ .iconburger .line:nth-child(3) {
+		transform: translateY(-10px) rotate(-225deg);
+	}
+	.nav :checked ~ .iconburger .line:nth-child(2) {
+		opacity: 0;
+	}
+	
+}

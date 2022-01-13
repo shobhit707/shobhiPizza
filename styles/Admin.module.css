@@ -1,0 +1,142 @@
+.container {
+  padding: 50px;
+  display: flex;
+}
+
+.item {
+  flex: 1;
+}
+
+.table {
+  width: 100%;
+  border-spacing: 20px;
+  text-align: left;
+}
+.contenttable {
+  width:90%;
+  border-collapse: collapse;
+  margin: 25px 0;
+  font-size: 0.9em;
+  min-width: 400px;
+  border-radius: 5px 5px 0 0;
+  overflow: hidden;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+
+.contenttable thead tr {
+  background-color: #d1411e;
+  color: #ffffff;
+  text-align: left;
+  font-weight: bold;
+}
+.contenttable th,
+.contenttable td {
+  padding: 12px 15px;
+}
+
+.contenttable tbody tr {
+  border-bottom: 1px solid #dddddd;
+}
+
+.contenttable tbody tr:nth-of-type(even) {
+  background-color: #f3f3f3;
+}
+
+.contenttable tbody tr:last-of-type {
+  border-bottom: 2px solid #009879;
+}
+
+.contenttable tbody tr.active-row {
+  font-weight: bold;
+  color: #009879;
+}
+
+.button {
+  border: none;
+  color: white;
+  padding: 5px;
+  cursor: pointer;
+}
+
+.button:first-child {
+  background-color: teal;
+  margin-right: 10px;
+}
+
+.button:last-child {
+  background-color: crimson;
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    padding: 20px;
+  }
+
+  .contenttable  {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .trTitle{
+    display: none;
+  }
+
+  .tr{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+
+  .imgContainer{
+    width: 35vw;
+    height: 35vw;
+  }
+
+  .name,.total{
+    font-size: 24px;
+  }
+
+  .extras,.price,.quantity{
+    font-size: 22px;
+  }
+
+  .price::before{
+    content: "Price: ";
+    font-weight: 500;
+  }
+  .quantity::before{
+    content: "Quantity: ";
+    font-weight: 500;
+  }
+  .total::before{
+    content: "Total: ";
+    font-weight: 500;
+  }
+
+  .id::before {
+    content: "Order ID: ";
+    font-weight: 500;
+  }
+  .name::before {
+    content: "Customer: ";
+    font-weight: 500;
+  }
+  .address::before {
+    content: "Address: ";
+    font-weight: 500;
+  }
+  .total::before {
+    content: "Total: ";
+    font-weight: 500;
+  }
+
+  .wrapper{
+    width: 100%;
+  }
+  
+}
