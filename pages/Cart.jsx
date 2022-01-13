@@ -27,7 +27,7 @@ const Cart = () => {
 
   const createOrder = async (data) => {
     try {
-      const res = await axios.post("http://localhost:3000/api/orders", data);
+      const res = await axios.post("https://shobhi-pizza-gulivpi0h-shobhitbhadoriya123-gmailcom.vercel.app/api/orders", data);
       if (res.status === 201) {
         dispatch(reset());
         toast.success("Order Placed Succesfully");
