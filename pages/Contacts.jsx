@@ -57,7 +57,7 @@ const Contacts = () => {
           <span className={styles.circleone}></span>
           <span className={styles.circletwo}></span>
 
-          <form  className={styles.formm} autocomplete="off">
+          <form  className={styles.formm} >
             <h3 className={styles.title}>Contact us</h3>
             <div className={styles.inputcontainer}>
               <input type="text" placeholder='Username' name="name" className={styles.input} />
