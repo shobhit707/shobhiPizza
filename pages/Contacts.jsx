@@ -23,16 +23,16 @@ const Contacts = () => {
 
           <div classNameName={styles.info}>
             <div className={styles.information}>
-               <Image src="img/location.png" className={styles.icon} alt="" width="30px" height="30px" />
+               <Image src="/img/location.png" className={styles.icon} alt="" width="30px" height="30px" />
               <p>1654 R. Don Road #304. NewYork, 85022</p>
                    
             </div>
             <div className={styles.information}>
-              <Image src="img/email.png" className={styles.icon} alt="" width="30px" height="30px" />
+              <Image src="/img/email.png" className={styles.icon} alt="" width="30px" height="30px" />
               <p>shobhipizza@gmail.com</p>
             </div>
             <div className={styles.information}>
-            <Image src="img/phone.png" className={styles.icon} alt="" width="30px" height="30px" />
+            <Image src="/img/phone.png" className={styles.icon} alt="" width="30px" height="30px" />
               <p>123-456-789</p>
             </div>
           </div>
