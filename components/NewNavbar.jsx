@@ -36,7 +36,7 @@ const NewNavbar = () => {
             </Link>
         </ul>
         
-        <label for={styles.navtoggle} className={styles.iconburger}>
+        <label  htmlFor={styles.navtoggle} className={styles.iconburger}>
             <div className={styles.line}></div>
             <div className={styles.line}></div>
             <div className={styles.line}></div>
