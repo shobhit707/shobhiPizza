@@ -116,7 +116,7 @@ const Order = ({order}) => {
 };
 export const getServerSideProps=async({params})=>{
   const res = await axios.get(
-    `https://shobhi-pizza-gulivpi0h-shobhitbhadoriya123-gmailcom.vercel.app/api/orders/${params.id}`
+    `https://shobhi-pizza.vercel.app/api/orders/${params.id}`
   );
   return{
     props:{
