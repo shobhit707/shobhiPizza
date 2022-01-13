@@ -93,7 +93,7 @@ const handleClick=()=>{
 
 export const getServerSideProps=async({params})=>{
   const res = await axios.get(
-    `http://localhost:3000/api/products/${params.id}`
+    `https://shobhi-pizza-gulivpi0h-shobhitbhadoriya123-gmailcom.vercel.app/api/products/${params.id}`
   );
   return{
     props:{
