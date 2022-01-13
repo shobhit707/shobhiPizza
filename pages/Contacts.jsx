@@ -1,6 +1,7 @@
 import { SocialIcon } from 'react-social-icons';
 import React from 'react'
 import styles from '../styles/Contact.module.css'
+import Image from "next/image";
 import { useRouter } from "next/router";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
@@ -15,24 +16,23 @@ const Contacts = () => {
       <span className={styles.bigcircle}></span>
       <div className={styles.form}>
         <div className={styles.contactinfo}>
-          <h3 className={styles.title}>Let's get in touch</h3>
+          <h3 className={styles.title}>{"Let's get in touch"}</h3>
           <p classNameName={styles.text}>
-           Want to contact us? We would love to hear from you . Here's how to reach us
-          </p>
+           {"Want to contact us? We would love to hear from you . Here's how to reach us"}</p>
+          
 
           <div classNameName={styles.info}>
             <div className={styles.information}>
-              <img src="img/location.png" className={styles.icon} alt="" />
-              <p>1654 R. Don Road #304.
-                    NewYork, 85022
-                    (602) 867-1010s</p>
+               <Image src="img/location.png" className={styles.icon} alt="" width="30px" height="30px" />
+              <p>1654 R. Don Road #304. NewYork, 85022</p>
+                   
             </div>
             <div className={styles.information}>
-              <img src="img/email.png" className={styles.icon} alt="" />
+              <Image src="img/email.png" className={styles.icon} alt="" width="30px" height="30px" />
               <p>shobhipizza@gmail.com</p>
             </div>
             <div className={styles.information}>
-              <img src="img/phone.png" className={styles.icon} alt="" />
+            <Image src="img/phone.png" className={styles.icon} alt="" width="30px" height="30px" />
               <p>123-456-789</p>
             </div>
           </div>
@@ -57,7 +57,7 @@ const Contacts = () => {
           <span className={styles.circleone}></span>
           <span className={styles.circletwo}></span>
 
-          <form  className={styles.formm} >
+          <form  className={styles.formm}>
             <h3 className={styles.title}>Contact us</h3>
             <div className={styles.inputcontainer}>
               <input type="text" placeholder='Username' name="name" className={styles.input} />
