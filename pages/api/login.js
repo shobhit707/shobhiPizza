@@ -4,8 +4,8 @@ const handler = (req, res) => {
   if (req.method === "POST") {
     const { username, password } = req.body;
     if (
-      username === "shobhi" &&
-      password === "6769"
+      username === "shobhit" &&
+      password === "1234567"
     ) {
       res.setHeader(
         "Set-Cookie",
