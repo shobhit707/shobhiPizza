@@ -90,8 +90,14 @@ const handleClick=()=>{
     </div>
   );
 };
+export const getStaticPaths: GetStaticPaths<{ slug: string }> = async () => {
 
-export const getServerSideProps=async({params})=>{
+    return {
+        paths: [], 
+        fallback: 'blocking' 
+    }
+}
+export const getStaticProps=async({params})=>{
   const res = await axios.get(
     `https://shobhi-pizza.vercel.app/api/products/${params.id}`
   );
