@@ -91,7 +91,7 @@ const handleClick=()=>{
   );
 };
 
-export const getStaticProps=async({params})=>{
+export const getServerSideProps=async({params})=>{
   const res = await axios.get(
     `https://shobhi-pizza.vercel.app/api/products/${params.id}`
   );
