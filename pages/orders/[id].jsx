@@ -114,7 +114,7 @@ const Order = ({order}) => {
     </div>
   );
 };
-export const getStaticProps=async({params})=>{
+export const getServerSideProps=async({params})=>{
   const res = await axios.get(
     `https://shobhi-pizza.vercel.app/api/orders/${params.id}`
   );
