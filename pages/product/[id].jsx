@@ -93,7 +93,7 @@ const handleClick=()=>{
 export const getStaticPaths=async()=>{
   const res=await fetch('https://shobhi-pizza.vercel.app/api/products');
   const data=await res.json();
-  const paths=data.map((pizza)=>{
+  const paths=[data].map((pizza)=>{
     return {
       params:{id:pizza._id.toString()}
     }
