@@ -90,20 +90,27 @@ const handleClick=()=>{
     </div>
   );
 };
-export const getStaticPaths: GetStaticPaths<{ slug: string }> = async () => {
-
+export const getStaticPaths=async()=>{
+  const res=await fetch('https://shobhi-pizza.vercel.app/api/products');
+  const data=await res.json();
+  const paths=data.map((pizza)=>{
     return {
-        paths: [], 
-        fallback: 'blocking' 
+      params:{id:pizza._id.toString()}
     }
+  })
+  return {
+    paths,
+    fallback:false
+  }
 }
-export const getStaticProps=async({params})=>{
-  const res = await axios.get(
-    `https://shobhi-pizza.vercel.app/api/products/${params.id}`
-  );
+
+export const getStaticProps=async(context)=>{
+  const id=context.params.id;
+  const res=await fetch(`https://shobhi-pizza.vercel.app/api/products/${id}`);
+  const data=await res.json();
   return{
     props:{
-      pizza:res.data,
+      pizza:data,
     }
   }
 }
