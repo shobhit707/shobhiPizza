@@ -97,12 +97,12 @@ export const getStaticPaths=async()=>{
     return {
       params:{id:pizza._id.toString()}
     }
-  })
+  });
   return {
     paths,
     fallback:false
-  }
-}
+  };
+};
 
 export const getStaticProps=async(context)=>{
   const id=context.params.id;
